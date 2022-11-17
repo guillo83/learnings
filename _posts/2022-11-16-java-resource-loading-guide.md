@@ -1,0 +1,1 @@
+#Java resource loading guide
