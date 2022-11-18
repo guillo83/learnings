@@ -5,7 +5,7 @@ date: 2022-11-16
 
 # Quick recipes
 ## Load resource in the same package as the calling code
-Use CallingClass.class.getResourceAsStream("fileName.ext"), where "fileName.ext" is in the same package than CallingClass. The folder structure of your project is similar to this:
+Use `CallingClass.class.getResourceAsStream("fileName.ext")`, where `"fileName.ext"` is in the same package than `CallingClass`. The folder structure of your project is similar to this:
 ```
 - YourModule
   - SourcesRoot
@@ -16,7 +16,8 @@ Use CallingClass.class.getResourceAsStream("fileName.ext"), where "fileName.ext"
         - fileName.ext 
 ```
 
-Here is an example:
+### Example
+#### Code
 
 ```
 package com.myPackage.path;
@@ -29,7 +30,7 @@ public class CallingClass {
 }
 ```
 
-Folder project stucture:
+#### Folder project stucture
 
 ```
 - MyModule
@@ -45,8 +46,9 @@ Folder project stucture:
 ### Option 1: Use CallingClass.class.getResourceAsStream("/full/path/fileName.ext")
 Notice that the resource path starts with '/'.
 
-Here is an example:
+### Example
 
+#### Code
 ```
 package com.myPackage.path;
 
@@ -58,8 +60,7 @@ public class CallingClass {
 }
 ```
 
-Folder project stucture:
-
+#### Folder project stucture
 ```
 - MyModule
   - src
@@ -73,7 +74,8 @@ Folder project stucture:
 ### Option 2: Use CallingClass.class.getClassLoader().getResourceAsStream("full/path/fileName.ext")
 Notice that the resources name doesn't start with '/'.
 
-Here is an example:
+### Example
+#### Code
 
 ```
 package com.myPackage.path;
@@ -86,7 +88,7 @@ public class CallingClass {
 }
 ```
 
-Folder project stucture:
+#### Folder project stucture
 
 ```
 - MyModule
@@ -98,12 +100,12 @@ Folder project stucture:
         - message.txt 
 ```
 
-# More in depth: How to load a resource in Java
+# More in depth
 
 Loading a resource in Java can be somewhat confusing the first time. After you read and understand the documentation, it is fairly obvious how to load resources.
 
 ## How Java loads resources?
-The short answer is using getResourceAsStream API (or any other getResource* API). The interesting part is that there are two distinct implementations of the getResourceAsStream API and if you use the wrong one you will not be able to load your resource.
+The short answer is using `getResourceAsStream` API (or any other getResource* API). The interesting part is that there are two distinct implementations of the getResourceAsStream API and if you use the wrong one you will not be able to load your resource.
 
 ## Class.getResourceAsStream
 You access this API by invoking YourCurrentClass.class.getResourceAsStream("resourceName"). 
