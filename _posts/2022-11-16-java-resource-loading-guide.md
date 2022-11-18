@@ -180,6 +180,8 @@ ${RESOURCES_ROOT}/atResourcesRoot.txt
 ```
 Notice that the resource name ("atResourcesRoot.txt") was resolved as an absolute path even when it doesn't start with '/'.  
 
+# Other interesting links
 
 https://docs.oracle.com/javase/9/docs/api/java/lang/ClassLoader.html
 https://www.baeldung.com/java-classloaders
+https://www.geeksforgeeks.org/classloader-in-java/
