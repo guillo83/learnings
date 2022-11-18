@@ -110,7 +110,7 @@ The short answer is using `getResourceAsStream` API (or any other getResource* A
 ## Class.getResourceAsStream
 You access this API by invoking YourCurrentClass.class.getResourceAsStream("resourceName"). 
 
-As the documentation of this API mentions, the absolute resource name is constructed from the given resource name using this algorithm:
+As the [documentation](https://docs.oracle.com/javase/8/docs/api/java/lang/Class.html#getResourceAsStream-java.lang.String-) of this API mentions, the absolute resource name is constructed from the given resource name using this algorithm:
 
 - If the name begins with a '/' ('\u002f'), then the absolute name of the resource is the portion of the name following the '/'.
 - Otherwise, the absolute name is of the following form:
@@ -156,7 +156,7 @@ Notice that the resource name starts with '/', which as per the documentation, i
 ## ClassLoader.getResourceAsStream
 You access this API by invoking YourCurrentClass.class.getClassLoader().getResourceAsStream("resourceName").
 
-The way the `resourceName` is resolved can get a bit more complex (from the documentation):
+The way the `resourceName` is resolved can get a bit more complex (from the [documentation](https://docs.oracle.com/javase/8/docs/api/java/lang/ClassLoader.html#getResourceAsStream-java.lang.String-)):
 
 ...first search the parent class loader for the resource; if the parent is null the path of the class loader built-in to the virtual machine is searched. That failing, this method will invoke findResource(String) to find the resource.
 
