@@ -182,6 +182,6 @@ Notice that the resource name ("atResourcesRoot.txt") was resolved as an absolut
 
 # Other interesting links
 
-https://docs.oracle.com/javase/9/docs/api/java/lang/ClassLoader.html
-https://www.baeldung.com/java-classloaders
-https://www.geeksforgeeks.org/classloader-in-java/
+https://docs.oracle.com/javase/9/docs/api/java/lang/ClassLoader.html<br />
+https://www.baeldung.com/java-classloaders<br />
+https://www.geeksforgeeks.org/classloader-in-java/<br />
